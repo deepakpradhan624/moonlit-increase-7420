@@ -12,13 +12,13 @@ const Navbar = () => {
    const [show,setShow]=useState(false)
 
   return (
-    <>
-      <div className="h-16 w-auto shadow-md  flex justify-center justify-between p-2">
+    <div onMouseLeave={()=>{setHover(<></>)}} onClick={()=>{setHover(<></>)}} >
+      <div  className="h-16 w-auto shadow-md  flex justify-center justify-between p-2">
          <div className=" items-center flex bold-sm">
             <h2 className='font-bold mr-2'>Limeroad</h2>
-            <div onMouseLeave={()=>{setHover(<></>)}} className='gap-2 ml-2 left-nav'>
+            <div className='gap-2 ml-2 left-nav'>
                <ul  className=" flex gap-10 ml-10">
-                  <li onMouseEnter={()=>{setHover(<Women/>)}} className='hover:text-red-400'>
+                  <li onMouseEnter={()=>{setHover(<Women />)}} className='hover:text-red-400'>
                      <a  href="" className='hover:border-b-4 transition-all hover:border-red-500'>
                         WOMEN
                      </a>
@@ -100,12 +100,19 @@ const Navbar = () => {
             
          </div>
       </div>
-      {Hover}
+      
+         <div className="" onMouseLeave={()=>{setHover(<></>)}} style={{width:"80%",margin:"auto",boxShadow: "rgba(0, 0, 0, 0.2) 0px 60px 40px -7px"}}>
+         { Hover}
+         </div>
+     
+    
+      
+      
       {
          show&&<Mobilemenu/>
       }
       
-    </>
+    </ div>
   )
 }
 
