@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom";
+import { Stack } from "@chakra-ui/react";
 
 const Sidebar = () => {
   const [searchParam, setSearchParam] = useSearchParams();
@@ -26,7 +27,6 @@ const Sidebar = () => {
     setRating(newRating);
   };
 
-
   const handleChange = (e) => {
     let newCategory = [...category];
     let value = e.target.value;
@@ -42,123 +42,131 @@ const Sidebar = () => {
   useEffect(() => {
     let params = {
       category,
-      rating
+      rating,
     };
     order && (params.order = order);
     setSearchParam(params);
   }, [category, order, rating]);
 
   return (
-    <div>
-      <h3>Filter by Rating</h3>
-      <div>
-        <input
-         
-          type="checkbox"
-          value="1"
-          onChange={handleRating}
-          checked={rating.includes("1")}
-        />
-        <label>{"\u2605 \u2606 \u2606 \u2606 \u2606"}</label>
-        <br />
-        <input
-          
-          type="checkbox"
-          value="2"
-          onChange={handleRating}
-          checked={rating.includes("2")}
-        />
-        <label>{"\u2605 \u2605 \u2606 \u2606 \u2606"}</label>
-        <br />
-        <input
-         
-          type="checkbox"
-          value="3"
-          onChange={handleRating}
-          checked={rating.includes("3")}
-        />
-        <label>{"\u2605 \u2605 \u2605 \u2606 \u2606"}</label>
-        <br />
-        <input
-          
-          type="checkbox"
-          value="4"
-          onChange={handleRating}
-          checked={rating.includes("4")}
-        />
-        <label>{"\u2605 \u2605 \u2605 \u2605 \u2606"}</label>
-        <br />
-        <input
-          
-          type="checkbox"
-          value="5"
-          onChange={handleRating}
-          checked={rating.includes("5")}
-        />
-        <label>{"\u2605 \u2605 \u2605 \u2605 \u2605"}</label>
-        <br />
-      </div>
-      <br />
-      <h3>Filter By</h3>
-      <div>
-        <input
-          type="checkbox"
-          value="shirt"
-          onChange={handleChange}
-          checked={category.includes("shirt")}
-        />
-        <label>Shirt</label>
-        <br />
-        <input
-          type="checkbox"
-          value="tshirt"
-          onChange={handleChange}
-          checked={category.includes("tshirt")}
-        />
-        <label>T-Shirt</label>
-<br />
-        <input
-          type="checkbox"
-          value="jogger"
-          onChange={handleChange}
-          checked={category.includes("jogger")}
-        />
-        <label>Jogger</label>
-<br />
-        <input
-          type="checkbox"
-          value="jacket"
-          onChange={handleChange}
-          checked={category.includes("jacket")}
-        />
-        <label>Jacket</label>
-        <br />
-        <input
-          type="checkbox"
-          value="sneaker"
-          onChange={handleChange}
-          checked={category.includes("sneaker")}
-        />
-        <label>Sneaker</label>
-      </div>
-      <h3>Sort By Price</h3>
-      <div onChange={handleSort}>
-        <input
-          type="radio"
-          name="order"
-          value={"asc"}
-          checked={order === "asc"}
-        />
-        <label>Low to High</label>
-        <input
-          type="radio"
-          name="order"
-          value={"desc"}
-          checked={order === "desc"}
-        />
-        <label>High to Low</label>
-      </div>
-    </div>
+    <>
+      <Stack direction={["column", "column", "column"]} w="40%" m="3">
+        <Stack>
+          <h3> <b>
+            Filter by Rating
+            </b> 
+            </h3>
+          <div>
+            <input
+              type="checkbox"
+              value="1"
+              onChange={handleRating}
+              checked={rating.includes("1")}
+            />
+            <label>{"\u2605 \u2606 \u2606 \u2606 \u2606"}</label>
+            <br />
+            <input
+              type="checkbox"
+              value="2"
+              onChange={handleRating}
+              checked={rating.includes("2")}
+            />
+            <label>{"\u2605 \u2605 \u2606 \u2606 \u2606"}</label>
+            <br />
+            <input
+              type="checkbox"
+              value="3"
+              onChange={handleRating}
+              checked={rating.includes("3")}
+            />
+            <label>{"\u2605 \u2605 \u2605 \u2606 \u2606"}</label>
+            <br />
+            <input
+              type="checkbox"
+              value="4"
+              onChange={handleRating}
+              checked={rating.includes("4")}
+            />
+            <label>{"\u2605 \u2605 \u2605 \u2605 \u2606"}</label>
+            <br />
+            <input
+              type="checkbox"
+              value="5"
+              onChange={handleRating}
+              checked={rating.includes("5")}
+            />
+            <label>{"\u2605 \u2605 \u2605 \u2605 \u2605"}</label>
+            <br />
+          </div>
+          <br />
+        </Stack>
+        <Stack>
+          <h3> <b>Filter By</b> </h3>
+          <div>
+            <input
+              type="checkbox"
+              value="shirt"
+              onChange={handleChange}
+              checked={category.includes("shirt")}
+            />
+            <label>  Shirt</label>
+            <br />
+            <input
+              type="checkbox"
+              value="tshirt"
+              onChange={handleChange}
+              checked={category.includes("tshirt")}
+            />
+            <label>  T-Shirt</label>
+            <br />
+            <input
+              type="checkbox"
+              value="jogger"
+              onChange={handleChange}
+              checked={category.includes("jogger")}
+            />
+            <label>  Jogger</label>
+            <br />
+            <input
+              type="checkbox"
+              value="jacket"
+              onChange={handleChange}
+              checked={category.includes("jacket")}
+            />
+            <label>  Jacket</label>
+            <br />
+            <input
+              type="checkbox"
+              value="sneaker"
+              onChange={handleChange}
+              checked={category.includes("sneaker")}
+            />
+            <label>  Sneaker</label>
+          </div>
+        </Stack>
+        <Stack>
+          <h3> <b>Sort By Price</b></h3>
+          <div onChange={handleSort}>
+            <input
+              type="radio"
+              name="order"
+              value={"asc"}
+              checked={order === "asc"}
+            />
+            
+            <label>  Low to High</label>
+            <br />
+            <input
+              type="radio"
+              name="order"
+              value={"desc"}
+              checked={order === "desc"}
+            />
+            <label>  High to Low</label>
+          </div>
+        </Stack>
+      </Stack>
+    </>
   );
 };
 

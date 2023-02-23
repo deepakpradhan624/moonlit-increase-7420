@@ -1,21 +1,18 @@
-import React from 'react'
-import ProductList from '../Component/ProductList'
-import Sidebar from '../Component/Sidebar'
-
+import React from "react";
+import ProductList from "../Component/ProductList";
+import Sidebar from "../Component/Sidebar";
+import { Stack } from "@chakra-ui/react";
 
 const HomePage = () => {
   return (
+    <>
+      <Stack direction={["column", "column", "row"]} margin="3" padding="3">
+        <Sidebar  />
 
-    <div style={{display:"flex"}}>
-        <div style={{width:"20%", border:"1px solid red", height:"auto"}}>
-            <Sidebar/>
-        </div>
-        <div style={{width:"80%", border:"1px solid black", height:"auto"}}>
+        <ProductList  />
+      </Stack>
+    </>
+  );
+};
 
-        <ProductList/>
-        </div>
-    </div>
-  )
-}
-
-export default HomePage
+export default HomePage;
