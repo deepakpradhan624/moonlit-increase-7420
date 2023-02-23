@@ -1,0 +1,17 @@
+@media screen and (max-width: 728px) {
+    .side-nav {
+      display: none;
+    }
+    .left-nav{
+        display: none;
+    }
+  }
+
+/* @media screen and (max-width: 728px) {
+.side-nav {
+    display: none;
+}
+.left-nav{
+    display: none;
+}
+} */
