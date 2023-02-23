@@ -1,9 +1,7 @@
 import React from 'react'
 
 export const Women = () => {
-  return (
-    <div className="bg-gray-300 " style={{ height:"88vh"}}>
-        <div className='border flex gap-10 bg-white justify-between p-5 m-auto' style={{width:"80%"}}>
+  return (<div className='border flex gap-10 bg-white justify-between p-5 m-auto' >
       <div className="">
         <div className="border bg-gray-200 rounded px-2 font-bold mb-2">test wthnic</div>
         <ul>
@@ -105,7 +103,7 @@ export const Women = () => {
         </ul>
       </div>
     </div>
-    </div>
+
   )
 }
 
