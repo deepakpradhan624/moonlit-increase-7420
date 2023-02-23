@@ -1,0 +1,11 @@
+.Navbar{
+
+
+    display: flex;
+    border: 1px solid red;
+
+}
+
+.Navbar>div{
+    border: 1px solid blue
+}
