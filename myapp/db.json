@@ -1,0 +1,36 @@
+{
+  "users": [
+    {
+      "firstName": "sudita",
+      "lastName": "pramanik",
+      "email": "supriyasahoo1011@gmail.com",
+      "mobile": "1234543657",
+      "password": "123456",
+      "id": 4
+    },
+    {
+      "firstName": "sp",
+      "lastName": "pramanik",
+      "email": "sela@gmail.com",
+      "mobile": "1234567890",
+      "password": "123456",
+      "id": 5
+    },
+    {
+      "firstName": "sudita",
+      "lastName": "pramanik",
+      "email": "sudiptaptamanik209@gmail.com",
+      "mobile": "1234567890",
+      "password": "12345",
+      "id": 6
+    },
+    {
+      "firstName": "bapan",
+      "lastName": "pramanik",
+      "email": "sela@gmail.com",
+      "mobile": "0987654321",
+      "password": "0987",
+      "id": 7
+    }
+  ]
+}
