@@ -1,15 +1,29 @@
-import React from 'react'
+import React from "react";
+import {
+  Button,
+  Card,
+  CardBody,
+  Heading,
+  Image,
+  SimpleGrid,
+  Stack,
+  Text,
+} from "@chakra-ui/react";
 
-const ProductCard = ({card}) => {
+const ProductCard = ({ card }) => {
   return (
-    <div style={{border:"1px solid blue"}}>
-        <img style={{width:"150px"}} src={card.img} alt="" />
-        <h4>{card.name}</h4>
-        <p>₹{card.price}</p>
-        <p>Rating:{card.ratingImage}</p>
-        <button style={{background:"blue", color:"white", width:"80%", height:"30px", marginBottom:"8px" }}>Add to Cart</button>
-    </div>
-  )
-}
+    <Card>
+      <CardBody>
+        <Image src={card.img} alt={card.name} />
+      </CardBody>
+      <Stack>
+        <Heading size="md">{card.name}</Heading>
+        <Text color={"blue.900"}>₹{card.price}</Text>
+        <Text>Rating: {card.ratingImage}</Text>
+        <Button colorScheme="orange">Add to Cart</Button>
+      </Stack>
+    </Card>
+  );
+};
 
-export default ProductCard
+export default ProductCard;
