@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-pascal-case */
 import {
     Container,
     Card,
@@ -11,8 +12,27 @@ import {
     Stack,
   } from "@chakra-ui/react";
   import Floating_input from "./Floating_Input_Lebel";
+  import React, { useEffect } from "react";
+  import { useSelector } from "react-redux";
+  import { useLocation, useNavigate } from "react-router-dom";
   
   const Login = () => {
+    const { data } = useSelector((store) => store.auth);
+
+  const { state } = useLocation();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (data.isAuth) {
+      //  console.log("login page" ,state )
+      if (state.from) {
+        //  console.log("if inside state.from ",state.from )
+        navigate(state.from, { replace: true });
+      } else {
+        navigate("/");
+      }
+    }
+  }, [data.isAuth, navigate, state.from]);
     return (
       // maxW='full' centerContent
       <Container maxW="md" mt={6}>

@@ -13,7 +13,7 @@ const firebaseConfig = {
   storageBucket: "limeroad-auth.appspot.com",
   messagingSenderId: "125586039612",
   appId: "1:125586039612:web:c18958ccf8dc8371bd7439",
-  measurementId: "G-PL60Z4K181"
+  
 };
 
 // Initialize Firebase
