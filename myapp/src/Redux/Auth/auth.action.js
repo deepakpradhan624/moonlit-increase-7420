@@ -42,3 +42,7 @@ export const RemoveUserDataAfter = () => async (dispatch) => {
     console.log("error", error);
   }
 };
+
+export const LogoutUser = () => ({
+  type: "LOGOUT_USER",
+});
