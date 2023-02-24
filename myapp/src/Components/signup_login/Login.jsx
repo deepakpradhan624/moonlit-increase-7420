@@ -38,10 +38,10 @@ const Login = () => {
   
   //   // rest of the component code
   // };
-  const logout = () => {
-    dispatch(LogoutUser());
-    navigateTo("/login");
-  }
+  // const logout = () => {
+  //   dispatch(LogoutUser());
+  //   navigateTo("/login");
+  // }
   
 
   const HandleChange = (evt) => {
@@ -79,7 +79,7 @@ const Login = () => {
           if (login) {
             dispatch(SetUserDataAfterLogin(login));
             toast({
-              title: "Welcome to Co-Commerce.",
+              title: "Welcome To limeroad.",
               description: "We are Happy To serve you.",
               status: "success",
               duration: 6000,
