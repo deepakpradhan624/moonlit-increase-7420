@@ -17,7 +17,8 @@ import {
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { useDispatch } from "react-redux";
-import { SetUserDataAfterLogin } from "../../Redux/Auth/auth.action";
+import { SetUserDataAfterLogin,LogoutUser } from "../../Redux/Auth/auth.action";
+
 const Login = () => {
   const toast = useToast();
   const dispatch = useDispatch();
@@ -26,6 +27,22 @@ const Login = () => {
     email: "",
     password: "",
   });
+
+
+  // const Profile = () => {
+  //   const userData = useSelector((state) => state.auth.userData);
+  
+  //   if (!userData) {
+  //     return <Navigate to="/login" />;
+  //   }
+  
+  //   // rest of the component code
+  // };
+  const logout = () => {
+    dispatch(LogoutUser());
+    navigateTo("/login");
+  }
+  
 
   const HandleChange = (evt) => {
     let { name, value } = evt.target;
@@ -139,12 +156,23 @@ const Login = () => {
                 _hover={{
                   bg: "blue.500",
                 }}
-                // eslint-disable-next-line no-sequences
+                
                 onClick={Login}
                 
               >
                 Sign in
               </Button>
+              {/* <Button
+                bg={"red.400"}
+                color={"white"}
+                _hover={{
+                bg: "red.500",
+                }}
+                onClick={logout}
+                >
+                Logout
+                </Button> */}
+
             </Stack>
             <Stack pt={6}>
               <Text align={"center"}>
