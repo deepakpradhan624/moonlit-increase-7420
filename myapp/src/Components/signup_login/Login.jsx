@@ -19,27 +19,27 @@ import axios from "axios";
 import { useDispatch,useSelector} from "react-redux";
 import { SetUserDataAfterLogin,LogoutUser } from "../../Redux/Auth/auth.action";
 const Login = () => {
-  var userData=true;
   const toast = useToast();
   const dispatch = useDispatch();
   const navigateTo = useNavigate();
-  //const userData = useSelector((state) => state.auth.userData);
+  const userData = useSelector(LogoutUser);
+  //console.log(userData);
   const [formData, setFormData] = useState({
     email: "",
     password: "",
   });
 
-  // const logout = () => {
-  //   dispatch(LogoutUser());
-  //   toast({
-  //     title: "Logout sucessfully",
-  //     description: "Here You can login again.",
-  //     status: "success",
-  //     duration: 4000,
-  //     isClosable: true,
-  //   });
-  //   //navigateTo("/login");
-  // }
+  const logout = () => {
+    dispatch(LogoutUser());
+    toast({
+      title: "Logout sucessfully",
+      description: "Here You can login again.",
+      status: "success",
+      duration: 4000,
+      isClosable: true,
+    });
+    navigateTo("/login");
+  }
   
 
   const HandleChange = (evt) => {
@@ -48,8 +48,7 @@ const Login = () => {
       ...formData,
       [name]: value,
     });
-    //userData=false;
-    //console.log(userData)
+    
   };
   const signUppage = () => {
     toast({
@@ -63,9 +62,9 @@ const Login = () => {
     navigateTo("/signup");
   };
   const Loginn = () => {
-    //userData=false;
+    
     try {
-      console.log("login called");
+      //console.log("login called");
       let users = axios
         .get("http://localhost:3000/users")
         .then((response) => {
@@ -75,7 +74,7 @@ const Login = () => {
               item.password === formData.password
             );
           });
-          console.log("login in user", login, response.data);
+          //console.log("login in user", login, response.data);
           
           if (login) {
             dispatch(SetUserDataAfterLogin(login));
@@ -169,7 +168,7 @@ const Login = () => {
                 bg: "red.500",
                 }}
                 //onClick={logout}
-                //onClick={() => logout()}
+                onClick={() => logout()}
                 >
                 Logout
                 </Button>)}
