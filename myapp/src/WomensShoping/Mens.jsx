@@ -2,12 +2,13 @@ import React from 'react'
 import axios from "axios"
 import Slider from "react-slick";
 import { useState,useEffect } from 'react'
-import "./Womens.modules.css"
+import  styles from "./Womens.modules.css"
+import {Link} from "react-router-dom"
 const Mens = () => {
     const[Data,setData]=useState([])
   
     const getData=async()=>{
-    return await  axios.get(`https://koti-api.onrender.com/shoes&bags`)
+    return await  axios.get("https://filthy-top-hat-fawn.cyclic.app/front")
     .then((res)=>setData(res.data))
     .catch((err)=>console.log(err))
     }
@@ -116,22 +117,15 @@ const settings = {
           {
            Data.map((el)=>{
             return(
-              <div  className='main'>
-                <div  className="card">
-                  <h2>{el.description}</h2>
-                    <img className='photo' src={el.image1} alt={el.cost}/>
-                    <center>
-                    <h1>{el.cost}</h1>
-                    <p>{el.description}</p>
-                    </center>
+              <div  className={styles.main}>
+                <div key={el.id} className={styles.card} >
+                  <Link to="/menproduct">
+                  
+                  <img  style={{width:"500px"}} src={el.img} alt="" />
+                  </Link>
                    
                 </div>
-                <div style={{display:"grid"}}>
-                  <img className='photo1' src={el.image1} alt={el.cost} />
-                  <img className='photo1' src={el.image2} alt={el.cost} />
-                  <img className='photo1' src={el.image3} alt={el.cost} />
-                  <img className='photo1' src={el.image4} alt={el.cost} />
-                </div>
+                
               </div>
             )
           })
