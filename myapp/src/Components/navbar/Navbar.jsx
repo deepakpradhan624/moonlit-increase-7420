@@ -3,8 +3,16 @@ import logo from "../../Asset/logo.png"
 // import from "@tailwind"
 import { BiSearchAlt2 } from 'react-icons/bi';
 import {Women} from './Women';
+import {Men} from './Men';
 import "./navbar.css"
 import Mobilemenu from './Mobilemenu';
+
+import { FaCartPlus } from "react-icons/fa";
+import { HiPencil } from "react-icons/hi";
+import { CgProfile } from "react-icons/cg";
+
+
+
 
 const Navbar = () => {
 
@@ -12,8 +20,8 @@ const Navbar = () => {
    const [show,setShow]=useState(false)
 
   return (
-    <div onMouseLeave={()=>{setHover(<></>)}} onClick={()=>{setHover(<></>)}} >
-      <div  className="h-16 w-auto shadow-md  flex justify-center justify-between p-2">
+    <div  onMouseLeave={()=>{setHover(<></>)}} onClick={()=>{setHover(<></>)}} >
+      <div  className="h-18w-auto shadow-md  flex justify-center justify-between p-2">
          <div className=" items-center flex bold-sm">
             <h2 className='font-bold mr-2'>Limeroad</h2>
             <div className='gap-2 ml-2 left-nav'>
@@ -23,7 +31,7 @@ const Navbar = () => {
                         WOMEN
                      </a>
                   </li>
-                  <li className=' hover:text-red-400'>
+                  <li  onMouseEnter={()=>{setHover(<Men />)}} className='hover:text-red-400'>
                      <a href=""  className='hover:border-b-4 transition-all hover:border-red-500'>
                         MEN
                      </a>
@@ -55,7 +63,9 @@ const Navbar = () => {
                <li className=' '>
                   <a href="#" className='hover:text-red-500'>
                      <div className="text-2xl">
-                     <BiSearchAlt2 style={{margin:"auto"}} />
+                     <HiPencil style={{margin:"auto"}} />
+
+
                      <p className="text-sm">SCARPBOOK</p>
                   </div>
                   </a>
@@ -64,22 +74,22 @@ const Navbar = () => {
                   <a href="#" className='hover:text-red-500'>
                      <div className="text-2xl">
                      <BiSearchAlt2 style={{margin:"auto"}}  />
-                     <p className="text-sm">Text</p>
+                     <p className="text-sm">SEARCH</p>
                   </div>
                   </a>
                </li>
                <li className='' >
                   <a href="#" className='hover:text-red-500'>
                      <div className="text-2xl">
-                     <BiSearchAlt2 style={{margin:"auto"}}  />
-                     <p className="text-sm" >Cart</p>
+                     <FaCartPlus style={{margin:"auto"}}  />
+                     <p className="text-sm" >CART</p>
                   </div>
                   </a>
                </li>
                <li className='' >
                   <a href="login" className='hover:text-red-500'>
                      <div className="text-2xl">
-                     <BiSearchAlt2 style={{margin:"auto"}}  />
+                     <CgProfile style={{margin:"auto"}}  />
                      <p className="text-sm">Profile</p>
                   </div>
                   </a>
