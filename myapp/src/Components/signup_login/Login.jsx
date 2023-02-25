@@ -16,31 +16,29 @@ import {
 } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import { useDispatch } from "react-redux";
+import { useDispatch,useSelector} from "react-redux";
 import { SetUserDataAfterLogin,LogoutUser } from "../../Redux/Auth/auth.action";
-
 const Login = () => {
+  var userData=true;
   const toast = useToast();
   const dispatch = useDispatch();
   const navigateTo = useNavigate();
+  //const userData = useSelector((state) => state.auth.userData);
   const [formData, setFormData] = useState({
     email: "",
     password: "",
   });
 
-
-  // const Profile = () => {
-  //   const userData = useSelector((state) => state.auth.userData);
-  
-  //   if (!userData) {
-  //     return <Navigate to="/login" />;
-  //   }
-  
-  //   // rest of the component code
-  // };
   // const logout = () => {
   //   dispatch(LogoutUser());
-  //   navigateTo("/login");
+  //   toast({
+  //     title: "Logout sucessfully",
+  //     description: "Here You can login again.",
+  //     status: "success",
+  //     duration: 4000,
+  //     isClosable: true,
+  //   });
+  //   //navigateTo("/login");
   // }
   
 
@@ -50,6 +48,8 @@ const Login = () => {
       ...formData,
       [name]: value,
     });
+    //userData=false;
+    //console.log(userData)
   };
   const signUppage = () => {
     toast({
@@ -62,7 +62,8 @@ const Login = () => {
     });
     navigateTo("/signup");
   };
-  const Login = () => {
+  const Loginn = () => {
+    //userData=false;
     try {
       console.log("login called");
       let users = axios
@@ -150,28 +151,30 @@ const Login = () => {
                 <Checkbox borderColor={"grey"}>Remember me</Checkbox>
                 <Link color={"blue.400"}>Forgot password?</Link>
               </Stack>
-              <Button
+              {userData ?(<Button
                 bg={"blue.400"}
                 color={"white"}
                 _hover={{
                   bg: "blue.500",
                 }}
                 
-                onClick={Login}
+                onClick={Loginn}
                 
               >
                 Sign in
-              </Button>
-              {/* <Button
+              </Button>):(<Button
                 bg={"red.400"}
                 color={"white"}
                 _hover={{
                 bg: "red.500",
                 }}
-                onClick={logout}
+                //onClick={logout}
+                //onClick={() => logout()}
                 >
                 Logout
-                </Button> */}
+                </Button>)}
+              
+              
 
             </Stack>
             <Stack pt={6}>
