@@ -117,7 +117,7 @@ const settings = {
            Data.map((el)=>{
             return(
               <div  className='main'>
-                <div  class="card">
+                <div  className="card">
                   <h2>{el.description}</h2>
                     <img className='photo' src={el.image1} alt={el.cost}/>
                     <center>
