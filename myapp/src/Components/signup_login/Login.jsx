@@ -16,8 +16,11 @@ import {
 } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import { useDispatch,useSelector} from "react-redux";
-import { SetUserDataAfterLogin,LogoutUser } from "../../Redux/Auth/auth.action";
+import { useDispatch, useSelector } from "react-redux";
+import {
+  SetUserDataAfterLogin,
+  LogoutUser,
+} from "../../Redux/Auth/auth.action";
 const Login = () => {
   const toast = useToast();
   const dispatch = useDispatch();
@@ -39,8 +42,7 @@ const Login = () => {
       isClosable: true,
     });
     navigateTo("/login");
-  }
-  
+  };
 
   const HandleChange = (evt) => {
     let { name, value } = evt.target;
@@ -48,7 +50,6 @@ const Login = () => {
       ...formData,
       [name]: value,
     });
-    
   };
   const signUppage = () => {
     toast({
@@ -62,41 +63,37 @@ const Login = () => {
     navigateTo("/signup");
   };
   const Loginn = () => {
-    
     try {
       //console.log("login called");
-      let users = axios
-        .get("http://localhost:3000/users")
-        .then((response) => {
-          let login = response.data.find((item) => {
-            return (
-              item.email === formData.email &&
-              item.password === formData.password
-            );
-          });
-          //console.log("login in user", login, response.data);
-          
-          if (login) {
-            dispatch(SetUserDataAfterLogin(login));
-            toast({
-              title: "Welcome To limeroad.",
-              description: "We are Happy To serve you.",
-              status: "success",
-              duration: 6000,
-              isClosable: true,
-            });
-            navigateTo("/menproduct");
-          } else {
-            console.log("login creds invalid");
-            toast({
-              title: "Credential Invalid.",
-              description: "",
-              status: "error",
-              duration: 4000,
-              isClosable: true,
-            });
-          }
+      let users = axios.get("http://localhost:3000/users").then((response) => {
+        let login = response.data.find((item) => {
+          return (
+            item.email === formData.email && item.password === formData.password
+          );
         });
+        //console.log("login in user", login, response.data);
+
+        if (login) {
+          dispatch(SetUserDataAfterLogin(login));
+          toast({
+            title: "Welcome To limeroad.",
+            description: "We are Happy To serve you.",
+            status: "success",
+            duration: 6000,
+            isClosable: true,
+          });
+          navigateTo("/menproduct");
+        } else {
+          console.log("login creds invalid");
+          toast({
+            title: "Credential Invalid.",
+            description: "",
+            status: "error",
+            duration: 4000,
+            isClosable: true,
+          });
+        }
+      });
     } catch (error) {
       console.log("error", error);
     }
@@ -150,31 +147,30 @@ const Login = () => {
                 <Checkbox borderColor={"grey"}>Remember me</Checkbox>
                 <Link color={"blue.400"}>Forgot password?</Link>
               </Stack>
-              {userData ?(<Button
-                bg={"blue.400"}
-                color={"white"}
-                _hover={{
-                  bg: "blue.500",
-                }}
-                
-                onClick={Loginn}
-                
-              >
-                Sign in
-              </Button>):(<Button
-                bg={"red.400"}
-                color={"white"}
-                _hover={{
-                bg: "red.500",
-                }}
-                //onClick={logout}
-                onClick={() => logout()}
+              {userData ? (
+                <Button
+                  bg={"blue.400"}
+                  color={"white"}
+                  _hover={{
+                    bg: "blue.500",
+                  }}
+                  onClick={Loginn}
                 >
-                Logout
-                </Button>)}
-              
-              
-
+                  Sign in
+                </Button>
+              ) : (
+                <Button
+                  bg={"red.400"}
+                  color={"white"}
+                  _hover={{
+                    bg: "red.500",
+                  }}
+                  //onClick={logout}
+                  onClick={() => logout()}
+                >
+                  Logout
+                </Button>
+              )}
             </Stack>
             <Stack pt={6}>
               <Text align={"center"}>

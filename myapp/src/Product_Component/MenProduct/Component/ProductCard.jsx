@@ -5,7 +5,6 @@ import {
   CardBody,
   Heading,
   Image,
-  SimpleGrid,
   Stack,
   Text,
 } from "@chakra-ui/react";
