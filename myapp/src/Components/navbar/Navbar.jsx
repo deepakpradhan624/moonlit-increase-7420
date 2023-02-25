@@ -77,7 +77,7 @@ const Navbar = () => {
                   </a>
                </li>
                <li className='' >
-                  <a href="#" className='hover:text-red-500'>
+                  <a href="login" className='hover:text-red-500'>
                      <div className="text-2xl">
                      <BiSearchAlt2 style={{margin:"auto"}}  />
                      <p className="text-sm">Profile</p>
