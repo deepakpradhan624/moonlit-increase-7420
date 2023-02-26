@@ -165,11 +165,11 @@ function remove(id){
               </div>
             </Link>
             <div className="w-[100%]">
-              <img
+              {/* <img
                 src="	https://images.meesho.com/images/marketing/1588578650850.webp"
                 className="w-[100%]"
                 alt=""
-              />
+              /> */}
             </div>
           </div>
         </div>
