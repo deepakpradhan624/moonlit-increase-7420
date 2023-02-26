@@ -65,7 +65,7 @@ const Login = () => {
   const Loginn = () => {
     try {
       //console.log("login called");
-      let users = axios.get("http://localhost:3000/users").then((response) => {
+      let users = axios.get("http://localhost:8080/users").then((response) => {
         let login = response.data.find((item) => {
           return (
             item.email === formData.email && item.password === formData.password
@@ -74,6 +74,7 @@ const Login = () => {
         //console.log("login in user", login, response.data);
 
         if (login) {
+          console.log("login in user", login, response.data);
           dispatch(SetUserDataAfterLogin(login));
           toast({
             title: "Welcome To limeroad.",

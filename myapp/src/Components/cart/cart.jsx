@@ -10,7 +10,7 @@ import { AiFillMinusSquare } from "react-icons/ai";
 export default function Cart() {
   const [totalPrice, setTotalPrice] = useState(0);
  const [cart,setcart]=useState(JSON.parse(localStorage.getItem("cart"))||[])
-  const [overightData, setOverightData] = useState([]);
+
 function minus(id,quantity){
     if(quantity<2){
         remove(id)

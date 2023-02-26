@@ -10,15 +10,36 @@ import Mobilemenu from './Mobilemenu';
 import { FaCartPlus } from "react-icons/fa";
 import { HiPencil } from "react-icons/hi";
 import { CgProfile } from "react-icons/cg";
+import { useDispatch, useSelector } from 'react-redux';
+import { LogoutUser } from '../../Redux/Auth/auth.action';
+import { Link } from 'react-router-dom';
+import { useToast } from '@chakra-ui/react';
 
 
 
 
 const Navbar = () => {
-
+   const {isAuth}=useSelector((state)=>{
+      return state.authReducer
+    })
+    const toast = useToast();
+    console.log(isAuth)
+    const dispatch=useDispatch()
    const [Hover , setHover] = useState(<></>);
    const [show,setShow]=useState(false)
-
+function logout(){
+  console.log("lohout")
+  toast({
+   title: "Logout sucessfully",
+   description: "Here You can login again.",
+   status: "success",
+   duration: 4000,
+   isClosable: true,
+ });
+      dispatch(LogoutUser());
+     
+    
+}
   return (
     <div  onMouseLeave={()=>{setHover(<></>)}} onClick={()=>{setHover(<></>)}} >
       <div  className="h-18w-auto shadow-md  flex justify-center justify-between p-2">
@@ -79,20 +100,25 @@ const Navbar = () => {
                   </a>
                </li>
                <li className='' >
-                  <a href="/cart" className='hover:text-red-500'>
+                  <Link to="cart" className='hover:text-red-500'>
                      <div className="text-2xl">
                      <FaCartPlus style={{margin:"auto"}}  />
                      <p className="text-sm" >CART</p>
                   </div>
-                  </a>
+                  </Link>
                </li>
                <li className='' >
-                  <a href="login" className='hover:text-red-500'>
+                  {isAuth?<Link onClick={logout} className='hover:text-red-500'>
+                  <div className="text-2xl">
+                  <CgProfile style={{margin:"auto"}}  />
+                  <p className="text-sm">Log-Out</p>
+               </div>
+               </Link>:<Link to="/login" className='hover:text-red-500'>
                      <div className="text-2xl">
                      <CgProfile style={{margin:"auto"}}  />
                      <p className="text-sm">Profile</p>
                   </div>
-                  </a>
+                  </Link>}
                </li>
             </ul>
 

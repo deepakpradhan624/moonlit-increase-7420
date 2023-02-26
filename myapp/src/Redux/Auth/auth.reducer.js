@@ -15,6 +15,7 @@ export const reducer = (state = initialState, { type, payload }) => {
       return {
         ...state,
         userData: { ...payload },
+        isAuth:true
       };
     }
     case types.LOGIN_GET_USER_DATA: {
@@ -41,6 +42,7 @@ export const reducer = (state = initialState, { type, payload }) => {
       return {
         ...state,
         isLoading: false,
+        isAuth: true
       };
     }
 
@@ -70,6 +72,11 @@ export const reducer = (state = initialState, { type, payload }) => {
         isLoading: false,
         isError: true,
       };
+    }
+    case "LOGOUT_USER":{
+      return{
+        ...initialState
+      }
     }
 
     default:

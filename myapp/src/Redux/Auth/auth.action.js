@@ -8,7 +8,7 @@ export const AddUser =
     dispatch({ type: types.ADD_USER_LOADING });
     try {
       let res = await axios.post(
-        "http://localhost:3000/users",
+        "http://localhost:8080/users",
         userData
       );
       dispatch({ type: types.ADD_USER_SUCCESS, payload: res.data });
@@ -44,5 +44,5 @@ export const RemoveUserDataAfter = () => async (dispatch) => {
 };
 
 export const LogoutUser = () => ({
-  type: "LOGOUT_USER",
+  type: "LOGOUT_USER"
 });

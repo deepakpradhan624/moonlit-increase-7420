@@ -9,6 +9,7 @@ import SignUp from "../Components/signup_login/SignUp";
 import Mens from "../WomensShoping/Mens";
 import Cart from "../Components/cart/cart";
 import Checkout from "../Checkout/Pages/Checkout";
+import Privateroute from "../Components/Privateroute";
 
 const MainRoutes = () => {
   return (
@@ -18,7 +19,7 @@ const MainRoutes = () => {
       <Route path="/login" element={<Login />} />
       <Route path="/signup" element={<SignUp />} />
       <Route path="/womenproduct" element={<WomenHomePage />} />
-      <Route path="/cart" element={<Cart/>} />
+      <Route path="/cart" element={<Privateroute><Cart/></Privateroute>} />
       <Route path="/checkout" element={<Checkout/>} />
     </Routes>
   );
