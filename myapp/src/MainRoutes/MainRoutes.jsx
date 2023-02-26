@@ -7,6 +7,7 @@ import WomenHomePage from "../Product_Component/WomenProduct/Pages/WomenHomePage
 import Login from "../Components/signup_login/Login";
 import SignUp from "../Components/signup_login/SignUp";
 import Mens from "../WomensShoping/Mens";
+import Cart from "../Components/cart/cart";
 
 const MainRoutes = () => {
   return (
@@ -16,6 +17,7 @@ const MainRoutes = () => {
       <Route path="/login" element={<Login />} />
       <Route path="/signup" element={<SignUp />} />
       <Route path="/womenproduct" element={<WomenHomePage />} />
+      <Route path="/cart" element={<Cart/>} />
     </Routes>
   );
 };
