@@ -32,7 +32,7 @@ const Navbar = () => {
                      </a>
                   </li>
                   <li  onMouseEnter={()=>{setHover(<Men />)}} className='hover:text-red-400'>
-                     <a href=""  className='hover:border-b-4 transition-all hover:border-red-500'>
+                     <a href="/menproduct"  className='hover:border-b-4 transition-all hover:border-red-500'>
                         MEN
                      </a>
                   </li>
@@ -42,7 +42,7 @@ const Navbar = () => {
                      </a>
                   </li>
                   <li className=' hover:text-red-400'>
-                     <a href="" className='hover:border-b-4 transition-all hover:border-red-500'>
+                     <a href="/" className='hover:border-b-4 transition-all hover:border-red-500'>
                         HOME
                      </a>
                   </li>

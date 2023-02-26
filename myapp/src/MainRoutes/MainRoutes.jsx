@@ -8,6 +8,7 @@ import Login from "../Components/signup_login/Login";
 import SignUp from "../Components/signup_login/SignUp";
 import Mens from "../WomensShoping/Mens";
 import Cart from "../Components/cart/cart";
+import Checkout from "../Checkout/Pages/Checkout";
 
 const MainRoutes = () => {
   return (
@@ -18,6 +19,7 @@ const MainRoutes = () => {
       <Route path="/signup" element={<SignUp />} />
       <Route path="/womenproduct" element={<WomenHomePage />} />
       <Route path="/cart" element={<Cart/>} />
+      <Route path="/checkout" element={<Checkout/>} />
     </Routes>
   );
 };

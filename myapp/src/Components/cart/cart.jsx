@@ -159,7 +159,7 @@ function remove(id){
               <p>Order Total </p>
               <p>₹ {totalPrice}</p>
             </div>
-            <Link to={"#"}>
+            <Link to={"/checkout"}>
               <div className="py-2 my-2 md:text-2xl text-[14px] text-center bg-[#F43397] rounded-lg text-slate-50">
                 Continue
               </div>

@@ -18,6 +18,7 @@ card.quantity=1;
     cart.push(card)
     localStorage.setItem("cart",JSON.stringify(cart))
     setadd(true)
+    alert("Item add to the cart")
   }
   return (
     <Card>
@@ -28,7 +29,7 @@ card.quantity=1;
         <Heading size="md">{card.name}</Heading>
         <Text color={"blue.900"}>₹{card.price}</Text>
         <Text>Rating: {card.ratingImage}</Text>
-        <Button onClick={addtocart} colorScheme="orange">{added?"added":"Add to Cart"}</Button>
+        <Button onClick={addtocart} colorScheme={added ? "teal" : "red"}>{added?"Added In Cart":"Add to Cart"}</Button>
       </Stack>
     </Card>
   );
