@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Button,
   Card,
@@ -10,6 +10,15 @@ import {
 } from "@chakra-ui/react";
 
 const ProductCard = ({ card }) => {
+card.quantity=1;
+  const [added,setadd]=useState(false)
+  function addtocart(){
+
+    let cart=JSON.parse(localStorage.getItem("cart"))||[]
+    cart.push(card)
+    localStorage.setItem("cart",JSON.stringify(cart))
+    setadd(true)
+  }
   return (
     <Card>
       <CardBody>
@@ -19,7 +28,7 @@ const ProductCard = ({ card }) => {
         <Heading size="md">{card.name}</Heading>
         <Text color={"blue.900"}>₹{card.price}</Text>
         <Text>Rating: {card.ratingImage}</Text>
-        <Button colorScheme="orange">Add to Cart</Button>
+        <Button onClick={addtocart} colorScheme="orange">{added?"added":"Add to Cart"}</Button>
       </Stack>
     </Card>
   );

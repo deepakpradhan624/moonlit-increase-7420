@@ -79,7 +79,7 @@ const Navbar = () => {
                   </a>
                </li>
                <li className='' >
-                  <a href="#" className='hover:text-red-500'>
+                  <a href="/cart" className='hover:text-red-500'>
                      <div className="text-2xl">
                      <FaCartPlus style={{margin:"auto"}}  />
                      <p className="text-sm" >CART</p>
