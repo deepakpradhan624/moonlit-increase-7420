@@ -83,7 +83,7 @@ const Login = () => {
             duration: 6000,
             isClosable: true,
           });
-          navigateTo("/");
+          navigateTo("/cart");
         } else {
           console.log("login creds invalid");
           toast({
