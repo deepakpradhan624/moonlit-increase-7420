@@ -117,7 +117,8 @@ const settings = {
           {
            Data.map((el)=>{
             return(
-              <div  className={styles.main}>
+              <>
+              <div styles={{border:"1px solid red", marginLeft:""}} >
                 <div key={el.id} className={styles.card} >
                   <Link to="/menproduct">
                   
@@ -127,6 +128,7 @@ const settings = {
                 </div>
                 
               </div>
+              </>
             )
           })
           }

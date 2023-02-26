@@ -82,7 +82,7 @@ const Login = () => {
             duration: 6000,
             isClosable: true,
           });
-          navigateTo("/menproduct");
+          navigateTo("/");
         } else {
           console.log("login creds invalid");
           toast({
