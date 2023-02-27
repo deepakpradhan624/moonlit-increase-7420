@@ -48,29 +48,29 @@ function logout(){
             <div className='gap-2 ml-2 left-nav'>
                <ul  className=" flex gap-10 ml-10">
                   <li onMouseEnter={()=>{setHover(<Women />)}} className='hover:text-red-400'>
-                     <a  href="" className='hover:border-b-4 transition-all hover:border-red-500'>
+                     <Link  to="/womenproduct" className='hover:border-b-4 transition-all hover:border-red-500'>
                         WOMEN
-                     </a>
+                     </Link>
                   </li>
                   <li  onMouseEnter={()=>{setHover(<Men />)}} className='hover:text-red-400'>
-                     <a href="/menproduct"  className='hover:border-b-4 transition-all hover:border-red-500'>
+                     <Link to="/menproduct"  className='hover:border-b-4 transition-all hover:border-red-500'>
                         MEN
-                     </a>
+                     </Link>
                   </li>
                   <li className=' hover:text-red-400'>
-                     <a href="" className='hover:border-b-4 transition-all hover:border-red-500'>
+                     <Link to="" className='hover:border-b-4 transition-all hover:border-red-500'>
                         KIDS
-                     </a>
+                     </Link>
                   </li>
                   <li className=' hover:text-red-400'>
-                     <a href="/" className='hover:border-b-4 transition-all hover:border-red-500'>
+                     <Link to="/" className='hover:border-b-4 transition-all hover:border-red-500'>
                         HOME
-                     </a>
+                     </Link>
                   </li>
                   <li className=' hover:text-red-400'>
-                     <a href="" className='hover:border-b-4 transition-all hover:border-red-500'>
+                     <Link to="" className='hover:border-b-4 transition-all hover:border-red-500'>
                         OFFER
-                     </a>
+                     </Link>
                   </li>
                </ul>
 
@@ -82,22 +82,22 @@ function logout(){
             <ul  className="font-bold items-center flex gap-10 side-nav">
               
                <li className=' '>
-                  <a href="#" className='hover:text-red-500'>
+                  <Link to="#" className='hover:text-red-500'>
                      <div className="text-2xl">
                      <HiPencil style={{margin:"auto"}} />
 
 
-                     <p className="text-sm">SCARPBOOK</p>
+                   <p className="text-sm">SCARPBOOK</p>
                   </div>
-                  </a>
+                  </Link>
                </li>
                <li className='' >
-                  <a href="#" className='hover:text-red-500'>
+                  <Link to="#" className='hover:text-red-500'>
                      <div className="text-2xl">
                      <BiSearchAlt2 style={{margin:"auto"}}  />
-                     <p className="text-sm">SEARCH</p>
+                   <p className="text-sm">SEARCH</p>
                   </div>
-                  </a>
+                  </Link>
                </li>
                <li className='' >
                   <Link to="cart" className='hover:text-red-500'>
