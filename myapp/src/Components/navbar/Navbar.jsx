@@ -44,7 +44,7 @@ function logout(){
     <div  onMouseLeave={()=>{setHover(<></>)}} onClick={()=>{setHover(<></>)}} >
       <div  className="h-18w-auto shadow-md  flex justify-center justify-between p-2">
          <div className=" items-center flex bold-sm">
-            <h2 className='font-bold mr-2'>FASHOCITY</h2>
+            <h2 className='font-bold mr-2'>Limeroad</h2>
             <div className='gap-2 ml-2 left-nav'>
                <ul  className=" flex gap-10 ml-10">
                   <li onMouseEnter={()=>{setHover(<Women />)}} className='hover:text-red-400'>
