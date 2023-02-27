@@ -1,70 +1,77 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Construct Week of Unit-5 | Project-Fashocity
 
-## Available Scripts
+Hello Everyone, We've developed a cosmetic e-comm website **Fashocity**. Currently, we are pursuing the Full Stack Web Development course at Masai School.
 
-In the project directory, you can run:
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+# About Project | Fashocity :
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Fashocity : It is an Indian e-commerce cosmetics company. It sells beauty, wellness and fashion products across websites and mobile apps.
 
-### `npm test`
+# Our Team Members:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Deepak Pradhan   
 
-### `npm run build`
+2. Ravindra Rana    
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+3. Sudipta Pramanik
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+4. Raviteja Illuri  
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+5. Dipali Goswami
 
-### `npm run eject`
+# Tech stacks used :
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+HTML, CSS , JS, React, TS, Redux, ChakraUI, API, JSON-server
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+# Some images of the project :
 
-## Learn More
+## 1. Home
+ ![Screenshot (516)](https://drive.google.com/file/d/10RNeflSc0vjIVZVFh4Q5BX7qU7CFAupT/view?usp=sharing)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 2. Login
+![Screenshot (517)](https://drive.google.com/file/d/1OHxSHNL617f1TaQX7zBfpkfH1YODF6CX/view?usp=sharing)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 3. Body
+![Screenshot (519)](https://drive.google.com/file/d/16xalpYN7FB-whxRarUhe-3JV7A0hlnRB/view?usp=sharing)
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+# Team Work Efforts:
 
-### Advanced Configuration
+First we created a Slack and WhatsApp group to establish communication between all the team members. Then we connected over zoom meet for further discussion about assigned project.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+In zoom meet we divideed small parts of project to all the team-member, next all are collecting raw data for project which content is better to merge and easy to complete work.
 
-### Deployment
+Daily we connect a meet after scrum then discuss about past days work and that day work, any one have issue all the team member helps to solve the problem.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+All push the data in Git-hub to their respective branch and merge to main branch.
 
-### `npm run build` fails to minify
+Finally we make the presentation of the project.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+# What We Learned From this project?
+
+-We all became proficient in understanding the code of the team members.
+-How to work and communicate with a team.
+-Implementation of Redux in a full fledged e-com website
+-Using different react hooks to enhance quality of code
+-Using Routing and PrivateRoutes in a project.
+
+
+Website Link:- https://fashocity-official.netlify.app/
+
+Source Code:- https://github.com/deepakpradhan624/moonlit-increase-7420
+
+Presentation Link:- https://drive.google.com/file/d/1_rb0E-DIxEQdO8-WxB8YwCWuSSm_bxE8/view?usp=sharing
+
+We hope this article will help in establishing better understanding of our project.
+
+# Thank you
+
