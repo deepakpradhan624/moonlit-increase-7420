@@ -30,13 +30,16 @@ HTML, CSS , JS, React, TS, Redux, ChakraUI, API, JSON-server
 # Some images of the project :
 
 ## 1. Home
- ![Screenshot (516)](https://drive.google.com/file/d/10RNeflSc0vjIVZVFh4Q5BX7qU7CFAupT/view?usp=sharing)
+![home](https://user-images.githubusercontent.com/107460051/221464242-6e87de16-f88f-4e37-b9c5-f3bfffe3c90c.PNG)
+
 
 ## 2. Login
-![Screenshot (517)](https://drive.google.com/file/d/1OHxSHNL617f1TaQX7zBfpkfH1YODF6CX/view?usp=sharing)
+![login](https://user-images.githubusercontent.com/107460051/221464375-09131d29-fba9-4bcb-a955-1d474f494cd3.jpg)
+
 
 ## 3. Body
-![Screenshot (519)](https://drive.google.com/file/d/16xalpYN7FB-whxRarUhe-3JV7A0hlnRB/view?usp=sharing)
+![body](https://user-images.githubusercontent.com/107460051/221464391-566a82d5-206a-4363-b85f-63e4f1af1f33.jpg)
+
 
 
 
