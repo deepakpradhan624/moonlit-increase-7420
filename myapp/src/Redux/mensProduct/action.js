@@ -19,7 +19,7 @@ export const productFailure = () => {
 export const getProduct=(param)=>(dispatch)=>{
 dispatch(productRequest())
 return axios
-.get("https://pink-shiny-bunny.cyclic.app/mens",param)
+.get("https://spring-bud-buffalo-robe.cyclic.app/mens",param)
 .then((res)=>{
     dispatch(productSuccess(res.data))
     console.log(res.data)
