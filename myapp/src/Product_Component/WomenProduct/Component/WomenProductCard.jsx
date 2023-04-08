@@ -1,15 +1,38 @@
-import React from 'react'
+import React, { useState } from "react";
+import {
+  Button,
+  Card,
+  CardBody,
+  Heading,
+  Image,
+  Stack,
+  Text,
+} from "@chakra-ui/react";
 
-const WomenProductCard = ({card}) => {
+const WomenProductCard = ({ card }) => {
+card.quantity=1;
+  const [added,setadd]=useState(false)
+  function addtocart(){
+
+    let cart=JSON.parse(localStorage.getItem("cart"))||[]
+    cart.push(card)
+    localStorage.setItem("cart",JSON.stringify(cart))
+    setadd(true)
+    alert("Item add to the cart")
+  }
   return (
-    <div style={{border:"1px solid blue"}}>
-        <img style={{width:"150px"}} src={card.img} alt="" />
-        <h4>{card.name}</h4>
-        <p>₹{card.price}</p>
-        <p>Rating:{card.ratingImage}</p>
-        <button style={{background:"blue", color:"white", width:"80%", height:"30px", marginBottom:"8px" }}>Add to Cart</button>
-    </div>
-  )
-}
+    <Card>
+      <CardBody>
+        <Image src={card.img} alt={card.name} />
+      </CardBody>
+      <Stack>
+        <Heading size="md">{card.name}</Heading>
+        <Text color={"blue.900"}>₹{card.price}</Text>
+        <Text>Rating: {card.ratingImage}</Text>
+        <Button onClick={addtocart} colorScheme={added ? "teal" : "red"}>{added?"Added In Cart":"Add to Cart"}</Button>
+      </Stack>
+    </Card>
+  );
+};
 
-export default WomenProductCard
+export default WomenProductCard;

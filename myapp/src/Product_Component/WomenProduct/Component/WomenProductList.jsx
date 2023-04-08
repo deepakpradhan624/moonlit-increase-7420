@@ -1,11 +1,13 @@
+import { SimpleGrid, Spinner } from '@chakra-ui/react'
 import React, { useEffect } from 'react'
 import {useDispatch, useSelector} from "react-redux"
 import { useLocation, useSearchParams } from 'react-router-dom'
-import { getProduct } from '../../../Redux/mensProduct/action'
+import { getWomenProduct } from '../../../Redux/womensProduct/action'
+import WomenProductCard from "./WomenProductCard"
 
 
-import styles from "../styles/productlist.module.css"
-import WomenProductCard from './WomenProductCard'
+// import ProductCard from '../Component/ProductCard'
+// import styles from "../styles/productlist.module.css"
 
 const WomenProductList = () => {
     const dispatch=useDispatch()
@@ -13,6 +15,9 @@ const WomenProductList = () => {
     const [searchParam]=useSearchParams()
     const womens=useSelector((store)=>{
         return store.womenReducer.womens
+    })
+    const loading=useSelector((store)=>{
+      return store.womenReducer.isLoading
     })
 let obj={
   params:{
@@ -23,14 +28,28 @@ let obj={
   }
 }
     useEffect(()=>{
-        dispatch(getProduct(obj))
+        dispatch(getWomenProduct(obj))
     },[location.search])
   return (
-    <div className={styles.listcontainer}>
-     {womens.length>0 && womens.map((el)=>{
+
+    <>
+    <SimpleGrid columns={[1, 1, 3]} spacing={3}>
+    {loading && (
+          <Spinner
+            size="xl"
+            thickness="7px"
+            color="teal.500"
+            position="absolute"
+            top="50%"
+            left="50%"
+          />
+        )}
+    {womens.length>0 && womens.map((el)=>{
         return <WomenProductCard key={el.id} card={el} />
      })}
-    </div>
+    </SimpleGrid>
+     
+    </>
   )
 }
 

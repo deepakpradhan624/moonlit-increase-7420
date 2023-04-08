@@ -1,23 +1,18 @@
-import React from 'react'
-import WomenProductList from '../Component/WomenProductList'
-import ProductList from '../Component/WomenProductList'
-import WomenSidebar from '../Component/WomenSidebar'
-import Sidebar from '../Component/WomenSidebar'
+import React from "react";
+import WomenProductList from "../Component/WomenProductList"
+import WomenSidebar from "../Component/WomenSidebar";
+import { Stack } from "@chakra-ui/react";
 
-
-const WomenHomePage = () => {
+const HomePage = () => {
   return (
+    <>
+      <Stack direction={["column", "column", "row"]} margin="3" padding="3">
+        <WomenSidebar  />
 
-    <div style={{display:"flex"}}>
-        <div style={{width:"20%", border:"1px solid red", height:"auto"}}>
-            <WomenSidebar/>
-        </div>
-        <div style={{width:"80%", border:"1px solid black", height:"auto"}}>
+        <WomenProductList  />
+      </Stack>
+    </>
+  );
+};
 
-        <WomenProductList/>
-        </div>
-    </div>
-  )
-}
-
-export default WomenHomePage
+export default HomePage;
