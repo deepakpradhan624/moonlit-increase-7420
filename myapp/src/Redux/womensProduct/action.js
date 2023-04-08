@@ -1,25 +1,25 @@
 import {
-    PRODUCT_FAILURE,
-    PRODUCT_REQUEST,
-    PRODUCT_SUCCESS,
+    WOMENPRODUCT_FAILURE,
+    WOMENPRODUCT_REQUEST,
+    WOMENPRODUCT_SUCCESS,
   } from "./actionTypes";
   import axios from "axios";
   
   export const productRequest = () => {
-    return { type: PRODUCT_REQUEST };
+    return { type: WOMENPRODUCT_REQUEST };
   };
   
   export const productSuccess = (payload) => {
-    return { type: PRODUCT_SUCCESS, payload };
+    return { type: WOMENPRODUCT_SUCCESS, payload };
   };
   export const productFailure = () => {
-    return { type: PRODUCT_FAILURE };
+    return { type: WOMENPRODUCT_FAILURE };
   };
   
-  export const getProduct=(param)=>(dispatch)=>{
+  export const getWomenProduct=(param)=>(dispatch)=>{
   dispatch(productRequest())
   return axios
-  .get("https://pink-shiny-bunny.cyclic.app/womens",param)
+  .get("https://spring-bud-buffalo-robe.cyclic.app/womens",param)
   .then((res)=>{
       dispatch(productSuccess(res.data))
       console.log(res.data)
