@@ -34,7 +34,8 @@ HTML, CSS , JS, React, TS, Redux, ChakraUI, API, JSON-server
 
 
 ## 2. Login
-![login](https://user-images.githubusercontent.com/107460051/230871947-55c7f34f-6028-4363-be83-1bdbee83628c.jpeg)
+![login_fesocity](https://user-images.githubusercontent.com/107460051/230872391-3c629c5c-4bfd-4336-8191-61550fcb783d.PNG)
+
 
 
 
