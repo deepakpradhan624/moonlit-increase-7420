@@ -34,7 +34,8 @@ HTML, CSS , JS, React, TS, Redux, ChakraUI, API, JSON-server
 
 
 ## 2. Login
-![login](https://user-images.githubusercontent.com/107460051/221464375-09131d29-fba9-4bcb-a955-1d474f494cd3.jpg)
+![login](https://user-images.githubusercontent.com/107460051/230871947-55c7f34f-6028-4363-be83-1bdbee83628c.jpeg)
+
 
 
 ## 3. Body
