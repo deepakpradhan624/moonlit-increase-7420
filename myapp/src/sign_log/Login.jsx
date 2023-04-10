@@ -16,7 +16,7 @@ function Login() {
       password.current.value === localPassword
     ) {
       // console.log(name.current.value,email.current.value,password.current.value)
-      navigate("/cart");
+      navigate("/");
     } else {
       alert("fill correct  details");
     }
