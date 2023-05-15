@@ -19,7 +19,7 @@ import {
   export const getWomenProduct=(param)=>(dispatch)=>{
   dispatch(productRequest())
   return axios
-  .get("https://spring-bud-buffalo-robe.cyclic.app/womens",param)
+  .get("https://careful-fish-sombrero.cyclic.app/womens",param)
   .then((res)=>{
       dispatch(productSuccess(res.data))
       console.log(res.data)
