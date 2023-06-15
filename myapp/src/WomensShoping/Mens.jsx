@@ -8,7 +8,7 @@ const Mens = () => {
     const[Data,setData]=useState([])
   
     const getData=async()=>{
-    return await  axios.get("https://filthy-top-hat-fawn.cyclic.app/front")
+    return await  axios.get("https://calm-puce-cygnet-sari.cyclic.app/front")
     .then((res)=>setData(res.data))
     .catch((err)=>console.log(err))
     }
